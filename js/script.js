@@ -1,11 +1,21 @@
+const numbers = document.getElementById("numbers");
+
 for (let i = 1; i <= 100; i++) {
+
+    let text;
+
+    // check multiples of 3 and 5
     if (i % 3 == 0 && i % 5 == 0) {
-        console.log(i + " fizzbuzz");
+        text = "fizzbuzz";
     } else if (i % 3 == 0) {
-        console.log(i + " fizz");
+        text = "fizz";
     } else if (i % 5 == 0) {
-        console.log(i + " buzz");
+        text = "buzz";
     } else {
-        console.log(i);
+        text = i;
     }
+
+    // add number element to ul
+    numbers.innerHTML += `<li>${text}</li>`;
+
 }
